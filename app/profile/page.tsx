@@ -19,7 +19,7 @@ const MyProfile = () => {
         .then(({ data }) => setPosts(data))
         .catch((err) => console.log(err));
     }
-  }, [session.user.id]);
+  }, [session?.user?.id]);
 
   const handleEdit = (post: Post) => {
     router.push(`/update-prompt?id=${post._id}`);
